@@ -1,5 +1,5 @@
 
-// 1. FIREBASE IMPORT (NOT YET SETUP)
+/*// 1. FIREBASE IMPORT (NOT YET SETUP)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
@@ -16,7 +16,7 @@ const firebaseConfig = {
 // 3. Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-
+*/
 // --- FORM HANDLING ---
 const contactForm = document.getElementById('projectForm');
 const submitBtn = document.getElementById('submitBtn');
