@@ -296,7 +296,7 @@ ul { list-style: none; }
     display: flex;
     gap: 20px;
     margin-top: auto;
-
+}
 .social-links-contact a {
     width: 45px;
     height: 45px;
