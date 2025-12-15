@@ -209,14 +209,10 @@ ul { list-style: none; }
 }
 
 /* =========================================
-   CONTACT SECTION
+   8. CONTACT SECTION
    ========================================= */
 
-/* =========================================
-   CONTACT SECTION STYLING
-   ========================================= */
-
-/* 1. The Main Wrapper (Glass Card) */
+/* The Main Wrapper (Glass Card) */
 .contact-wrapper {
     display: flex;
     flex-wrap: wrap; 
@@ -226,7 +222,7 @@ ul { list-style: none; }
     overflow: hidden; 
 }
 
-/* 2. LEFT SIDE (Info) */
+/* LEFT SIDE (Info) */
 .contact-content-left {
     flex: 1;
     min-width: 300px;
@@ -321,7 +317,7 @@ ul { list-style: none; }
     box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
 }
 
-/* 3. RIGHT SIDE (Form) */
+/* RIGHT SIDE (Form) */
 .contact-content-right {
     flex: 1.2; 
     min-width: 300px;
@@ -332,11 +328,21 @@ ul { list-style: none; }
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
 }
+
+/* --- THE FIX START (Added missing class) --- */
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Spacing between label and input */
+}
+/* --- THE FIX END --- */
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     font-weight: 600;
     color: var(--accent-color);
     font-size: 0.9rem;
@@ -353,6 +359,7 @@ ul { list-style: none; }
     font-size: 1rem;
     font-family: inherit;
     transition: 0.3s all;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
 }
 
 .form-group input:focus, 
