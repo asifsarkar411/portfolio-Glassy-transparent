@@ -1,4 +1,29 @@
 
+// Wait for the DOM to load
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const contactBtn = document.getElementById('contactBtn');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    if(contactBtn) {
+        contactBtn.addEventListener('click', function(e) {
+            // 1. Allow default smooth scroll (handled by CSS)
+            
+            // 2. Add the blinking class to inputs
+            setTimeout(() => {
+                emailInput.classList.add('blink-highlight');
+                messageInput.classList.add('blink-highlight');
+            }, 500); // Small delay so it starts when user arrives at section
+
+            // 3. Remove the class after 3 seconds so it stops blinking
+            setTimeout(() => {
+                emailInput.classList.remove('blink-highlight');
+                messageInput.classList.remove('blink-highlight');
+            }, 3500); // 3000ms animation + 500ms delay
+        });
+    }
+});
 /*// 1. FIREBASE IMPORT (NOT YET SETUP)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
